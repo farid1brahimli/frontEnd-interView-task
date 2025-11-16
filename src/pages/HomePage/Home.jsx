@@ -1,9 +1,9 @@
+import SkeletonPage from "../../Companents/SkeletonPage/SkeletonPage";
+import Card from "../../Companents/Cards/Card";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../../styles/global.scss";
 import "./Home.scss";
-import Card from "../../Companents/Cards/Card";
-import { Link } from "react-router-dom";
-import SkeletonPage from "../../Companents/SkeletonPage/SkeletonPage";
 
 const home = () => {
   const [products, setProducts] = useState([]);
@@ -16,7 +16,6 @@ const home = () => {
       try {
         const res = await fetch("https://fakestoreapi.com/products");
         const data = await res.json();
-        console.log(data);
         setProducts(data);
       } catch (error) {
         setError(error.message);
@@ -57,7 +56,7 @@ const home = () => {
     <div className="home">
       <div className="header">
         <h1>Product Management App</h1>
-        <form action=""></form>
+        <form></form>
         <input
           type="text"
           placeholder="Search title.."
@@ -72,7 +71,7 @@ const home = () => {
       <div className="card-container">
         {products
           .filter((item) =>
-            item.title.toLowerCase().includes(inputValue.toLowerCase())
+            item.title.trim().split(" ").pop().toLowerCase().startsWith(inputValue.toLowerCase())
           )
           .map((item) => (
             <Card
