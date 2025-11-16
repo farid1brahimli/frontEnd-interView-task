@@ -17,7 +17,7 @@ const Card = ({ image, title, price, id, deleteCard }) => {
         </div>
         <div className="card-btns">
           <button><Link className="btn" to={`/product/${id}`} key={id}><span>Detail</span></Link></button>
-          <button><Link className="btn" to={"/updateProduct"}><span>Update</span></Link></button>
+          <button><Link className="btn" to={`/updateProduct/${id}`}><span>Update</span></Link></button>
         </div>
       </div>
   );
