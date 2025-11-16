@@ -1,0 +1,38 @@
+.detail-page{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vw;
+    h1{
+        margin: 1vw 0;
+        font-size: 4vw;
+    }
+    .card-detail{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid darkgray;
+        border-radius: 8px;
+        padding: 2vw;
+        .card-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5vw;
+            img{
+                width: 40%;
+            }
+            p{
+                margin-bottom: 1vw;
+                font-size: 1.5vw;
+            }
+        }
+        .card-description{
+            h3{
+                margin-bottom: 0.5vw;
+            }
+        }
+    }
+}

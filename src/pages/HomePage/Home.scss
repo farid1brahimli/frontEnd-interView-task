@@ -1,0 +1,29 @@
+@import '../../Companents/Cards/Card.scss';
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:rgb(238, 238, 238);
+  padding: 0 10vw;
+  .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+    h1{
+        padding: 0;
+        font-size: 3vw
+    }
+    button, input{
+        @include btn-style;
+        padding: 0;
+        width: 15%;
+    }
+  }
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,47 @@
+@mixin skeleton-style {
+  background-color: #e2e2e2;
+  border-radius: 5px;
+}
+
+.card-skeleton {
+   border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  width: 250px;
+  padding: 70px 10px 10px;
+  animation: pulse 1.5s infinite ;
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img {
+      @include skeleton-style();
+      width: 120px;
+      height: 150px;
+    }
+    .h2,
+    .p {
+      @include skeleton-style();
+      width: 100px;
+      height: 25px;
+      margin-top: 10px;
+    }
+  }
+  .product-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 7px;
+    button {
+      @include skeleton-style();
+      width: 50%;
+      height: 50px;
+      margin-top: 5px;
+      border: 0;
+    }
+  }
+}
+
+
