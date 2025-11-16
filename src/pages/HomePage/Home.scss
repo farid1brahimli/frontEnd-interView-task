@@ -16,8 +16,11 @@
     }
     button, input{
         @include btn-style;
-        padding: 0;
         width: 15%;
+    }
+    input::placeholder{
+       font-size: 18px;
+       color: black;
     }
   }
   .card-container {

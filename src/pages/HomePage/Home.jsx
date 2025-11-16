@@ -56,12 +56,11 @@ const home = () => {
     <div className="home">
       <div className="header">
         <h1>Product Management App</h1>
-        <form></form>
-        <input
-          type="text"
-          placeholder="Search title.."
-          onChange={findByTitle}
-        />
+          <input
+            type="text"
+            placeholder="Search title..."
+            onChange={findByTitle}
+          />
         <button className="add-btn">
           <Link className="btn" to={"/createProduct"}>
             <span>Add Product</span>
@@ -71,7 +70,12 @@ const home = () => {
       <div className="card-container">
         {products
           .filter((item) =>
-            item.title.trim().split(" ").pop().toLowerCase().startsWith(inputValue.toLowerCase())
+            item.title
+              .trim()
+              .split(" ")
+              .pop()
+              .toLowerCase()
+              .startsWith(inputValue.toLowerCase())
           )
           .map((item) => (
             <Card
